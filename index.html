@@ -1,188 +1,274 @@
-<!doctype html>
-<html> 
- <head> 
-  <title>Page Title</title> 
-  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css"> 
- <style type="text/css" id="dcoder_stylesheet">
- body{
-   
- margin:0;
- padding: 0;
-  background: linear-gradient(-45deg, rgba(247, 71, 10, 0.59) 0%, rgba(51, 227, 210, 0.57) 25%, rgba(251, 8, 8, 0.8) 50%, rgba(107, 51, 211, 0.6) 75%, rgba(105, 0, 255, 0.57) 100%) no-repeat;
-  background-size: 500%;
-  background-attachment: fixed;
-  animation: gradientAnim 6s ease infinite;
-}
+<!DOCTYPE html>
+<html>
 
-@keyframes gradientAnim {
-  0% {
-    background-position: 0% 25%;
-  }
-  25% {
-    background-position: 25% 50%;
-  }
-  50% {
-    background-position: 50% 75%;
-  }
-  75% {
-    background-position: 75% 100%;
-  }
-  100% {
-    background-position: 0% 25%;
-  }
-}
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title></title>
+  
+  <link rel="stylesheet" type="text/css" href="style.css">
+  <script src="script.js"></script>
+  
+    <style>
 
- /*
- display: absolute ;
+  
+    </style>
 
-  animation:change 15s linear infinite;
-    animation-fill-mode:forwards;}
-@keyframes change{    
-20%{background-color:#44241CE8;}
-40%{background-color:#17343AA3;}
-60%{background-color:#2D193DA8;}
-80%{background-color:#171308B5;}
-100%{background-color:#1F0C1AC2;}
-}
-*/
  
+</head>
 
-.heart {
-  position: fixed;
-  top: 0;
-  right: 0;
-  width:3px ;
-  height:3px;
-  color: white;
-  font-family: cursive;
-  font-size: 2rem;
-  transform: translateY(0);
-  text-shadow: 
-     0 0 8px #FFFFFF, 
-     0 0 8px #FFFFFF, 
-     0 0 8px #FFFFFF, 
-     0 0 4px #FFFFFF, 
-     0 0 4px #FFFDFD, 
-     0 0 6px #FFFFFF, 
-     0 0 6px #FFFEFE;
-  animation: fall 5s linear forwards;
-}
-
-@keyframes fall {
-  from {
-    transform: translateX(0) translateY(0);
-  }
-  to {
-    transform: translateX(-100vw) translateY(100vh);
-  }
-}
-
-
-
-    #countdown {
-        font-weight: bolder;
-        font-family:cursive ;
-        text-align: center;
+<body>
+  
+    <style type="text/css" media="all">
+    
+    
+        .g1 {
+      display: flex;
+      position: absolute;
+      align-items: center;
+      justify-content: center;
+    }
+    .best {
+      z-index: 1500;
+      width: 100vw;
+      height: 100vh;
+     
+      display: flex;
+      position:fixed;
          
-         font-size:90px;
+      align-items: center;
+      justify-content: center;
+      flex-direction: column;
+      background-color: rgba(0, 0, 0, 0.95);
     }
-    h1 {
-        color:white; 
-        text-shadow :5px 10px black;
-        
+    .cir {
+      width: 150px;
+      height: 150px;
+      position: absolute;
+      border-radius: 50%;
+      border: 3px solid rgb(73,174,60);
+      animation: 5s first linear infinite;
     }
-    table {
-        border-radius: 200px;
-        margin-bottom: 80px;
-    
+    .cir1 {
+      animation-delay: 0.5s;
+      border-color: #00f;
     }
-    td {
-        background-color: rgba(255,182,70,1);
-        border-radius: 100px;
-        padding: 60px;
-        box-shadow:7px 7px 13px white;
-        
+    .cir2 {
+      animation-delay: 1s;
+      border-color: #57f5f2;
     }
-
-    a {
-        font-size: 100px;
-        background-color: black;
-        padding: 50px;
-        border-radius: 50px;
-        font-weight: bolder;
-        text-decoration: underline;
-        color: white;
-        color: red;
-        box-shadow:15px 15px 23px white;
-
+    .cir3 {
+      animation-delay: 1.5s;
+      border-color: #73838b;
     }
-    i {
-        color: red;
-        width: 205px;
+    .cir4 {
+      animation-delay: 2s;
+      border-color: #0043ff;
     }
-    
-      
-      }</style></head> 
- <body> 
-  <div id="countdown" align="center"> 
-   <h1>Birthday Countdown</h1> 
-   <table align="center"> 
-    <tbody> 
-     <tr> 
-      <td id="days"></td> 
-      <td id="hours"></td> 
-      <td id="minutes"></td> 
-      <td id="seconds"></td> 
-     </tr> 
-     <tr> 
-      <td>Days</td> 
-      <td>Hours</td> 
-      <td>Minutes</td> 
-      <td>Seconds</td> 
-     </tr> 
-    </tbody> 
-   </table> 
+    .cir5 {
+      animation-delay: 2.5s;
+      border-color: #ff0027;
+    }
+    .cir6 {
+      animation-delay: 3s;
+      border-color: #3bff00;
+    }
+    .go {
+      width: 18px;
+      height: 18px;
+      position: relative;
+      border-radius: 9px;
+      animation: 6s going linear infinite;
+    }
+    .go1 {
+      background-color: #3bff00;
+    }
+    .go2 {
+      background-color: #0043ff;
+      animation-delay: 1s;
+    }
+    .go3 {
+      background-color: #ff0027;
+      animation-delay: 2s;
+    }
+    .go4 {
+      background-color: #73838b;
+      animation-delay: 3s;
+    }
+    .ld::before {
+      content: "Loading";
+      top: 100px;
+      color: #fff;
+      font-family: Times New Roman;
+      font-size: 30px;
+      font-weight: 850px;
+      position: relative;
+      text-transform: uppercase;
+      animation: s ld linear infinite;
+    }
+@keyframes ld {
+      0% {
+        content: "loading";
+      }
+      25% {
+        content: "loading.";
+      }
+      50% {
+        content: "loading..";
+      }
+      75% {
+        content: "loading...";
+      }
+    }
+@keyframes going {
+      0% {
+        top: 0;
+      }
+      9% {
+        top: -50px;
+        height: 40px;
+        transform: rotate(0deg);
+      }
+      15% {
+        transform: rotate(360deg);
+      }
+      24% {
+        top: -50px;
+        height: 40px;
+      }
+      30% {
+        top: 0;
+        height: 18px;
+        transform: rotate(360deg);
+      }
+    }
+@keyframes first {
+      50% {
+        transform: rotateX(360deg) rotateY(360deg) rotateZ(360deg) scale(0.3);
+      }
+    }
+   </style> 
+  
+ <div id="preloader"> 
+   <div class="best"> 
+    <div class="g1"> 
+     <div class="cir1 cir"></div> 
+     <div class="cir2 cir"></div> 
+     <div class="cir3 cir"></div> 
+     <div class="cir5 cir"></div> 
+     <div class="cir6 cir"></div> 
+     <div class="go1 go"></div> 
+     <div class="go2 go"></div> 
+     <div class="go3 go"></div> 
+     <div class="go4 go"></div> 
+    </div> 
+    <div class="g2"> 
+     <div class="ld"></div> 
+    </div> 
+   </div> 
   </div> 
+
+
+
+
+ <div class="marquee"> 
+   <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Sofia&amp;effect=fire"> 
+   <h8 class="font-effect-fire"> <marquee behavior="alternate">
+         🧡Today is ur day🧡
+    </marquee> </h8> 
+    
+
+
+  
+<div id="battery-level">
+ </div>
+
+
+
+
+<div id="transbox"> 
+
+<div class="dpimg">
+ <div class="text1">
+ <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Sofia&amp;effect=fire"> 
+  
+ <h1  class="font-effect-fire" style="color:black;">
+  Happy Bornday Buddy 
+   
+   </h1> 
+ 
+  </div>
+ </div>
+</div>
+
+
+
+<div id="transbox2">
+ 
+  <div class="bdypic">
+    </div>
+    </div>
+    
+    
+        <div id="trans3"
+         
+       <div class="longtext">
+     <h2 class="ltext">  
+     
+     Happy Birthday 🎂. May your birthday be the start of a new chapters..and as a friend mai nhi but tu merko treat dena🫣😎 ky faida aise friendship ka jab frind party hi na de😂..
+hamare bich banta nhi tha but fir bad mai  ham ache friends v ho gye.. vibe match v hote h.. Lekin gusa jaldi ho jati h tu or irritate krne mai maja v ata h😂.. kuch v share krta hu to help or suggestions krti "support "
+ merko terpe trust v bohot ha🖤🗿..
+     
+     
+     
+     </h2>
+  </div>
+</div>
+  </div>
+  
+  
   
  
-<script type="text/javascript" id="dcoder_script">var eventDate=new Date("jan 31, 2025, 00:00:00").getTime();
 
-    // Creating an interval function 
-
-    var x= setInterval(function(){
-   // get the current time
-
-   var now= new Date().getTime();
-
-   // The remaining time 
-
-   var remain= eventDate-now;
-
-   var s=Math.floor(remain/(1000));
-   var m=Math.floor(remain/(1000*60));
-   var h=Math.floor(remain/(1000*60*60));
-   var d=Math.floor(remain/(1000*60*60*24));
+   <div class="mamba">
+    Created By Mamba
+   </div>
 
 
-   h %=24;
-   m %=60;
-   s %=60;
 
-   h=(h<10)?"0"+h:h;
-   m=(m<10)?"0"+m:m;
-   s=(s<10)?"0"+s:s;
 
-   document.getElementById('days').textContent=d;
-   document.getElementById('hours').textContent=h;
-   document.getElementById('minutes').textContent=m;
-   document.getElementById('seconds').textContent=s;
 
-    },1000);
- //</script>
- 
- 
- 
-  <script>
+   <script>
+    
+    var loader = document.getElementById("preloader");
+    window.addEventListener("load",function(){
+      loader.style.display="none";
+    
+    
+     })
+  
+    </script>
+
+
+
+<audio id="song" src="https://www.dropbox.com/scl/fi/3f26ykxedomv0fkpuwq9d/Convert_Moonlight-Harnoor-_-MXRCI-_-Punjabi-Song-2020-_-Jatt-Life-Studios.mp3?rlkey=tji9y5bwy2w921nekwt3vwkcg&st=pq33fto8&dl=1" autoplay style="display:none;"></audio>
+
+<script>
+  window.addEventListener('click', function () {
+    var audio = document.getElementById("song");
+    audio.play();
+    navigator.vibrate([50, 200, 50, 200, 50, 200, 50, 200, 100, 300, 100, 300, 100, 300, 100, 300]);
+    setInterval(function () {
+      navigator.vibrate([50, 200, 50, 200, 50, 200, 50, 200, 100, 300, 100, 300, 100, 300, 100, 300]);
+    }, 2000);
+  });
+  
+
+</script>
+
+                   
+
+ <script>
  
 function createHeart() {
   const heart = document.createElement("div");
@@ -205,7 +291,84 @@ setInterval(createHeart,100);
     
   </script>
     
+    
+    
+    
+    
+    
+ <script>
+  navigator.getBattery().then(battery => {
+    const batteryLevel = document.getElementById('battery-level');
+    batteryLevel.innerText = ` 𓈆↯⁩⁩⁩${battery.level * 100}%`;
+    
+    // Battery level ko update karein
+    battery.addEventListener('levelchange', () => {
+      batteryLevel.innerText = `𓈆↯⁩⁩⁩ ${battery.level * 100}%`;
+    });
+  });
+</script>
+
+  <script>
+    // Music ke audio file ko load karein
+    const audioFile = 'https://www.dropbox.com/scl/fi/3f26ykxedomv0fkpuwq9d/Convert_Moonlight-Harnoor-_-MXRCI-_-Punjabi-Song-2020-_-Jatt-Life-Studios.mp3?rlkey=tji9y5bwy2w921nekwt3vwkcg&st=pq33fto8&dl=1';
+    const audio = new Audio(audioFile);
+    const audioContext = new AudioContext();
+    const source = audioContext.createMediaElementSource(audio);
+    source.connect(audioContext.destination);
+    const analyser = audioContext.createAnalyser();
+    source.connect(analyser);
+    analyser.fftSize = 256;
+    const frequencyData = new Uint8Array(analyser.frequencyBinCount);
+
+    // Amplitude aur frequency ke basis par vibration pattern generate karein
+    function generateVibrationPattern() {
+      analyser.getByteFrequencyData(frequencyData);
+      const amplitude = Math.max(...frequencyData);
+      const frequency = frequencyData.indexOf(amplitude);
+      const vibrationPattern = [];
+
+      for (let i = 0; i < frequencyData.length; i++) {
+        const frequencyValue = frequencyData[i];
+        const amplitudeValue = amplitude;
+
+        if (amplitudeValue > 50 && frequencyValue > 100) {
+          vibrationPattern.push(500); // Vibrate for 500ms
+        } else {
+          vibrationPattern.push(0); // Don't vibrate
+        }
+      }
+
+      return vibrationPattern;
+    }
+
+    // Vibration pattern ko phone ke vibration motor par send karein
+    function vibrate() {
+      const vibrationPattern = generateVibrationPattern();
+      navigator.vibrate(vibrationPattern);
+    }
+
+    // Screen par click event listener
+    document.body.addEventListener('click', function() {
+      // Vibration code
+      navigator.vibrate(100);
+      
+      // Audio play karein
+      audio.play().catch(error => {
+        console.log('Error playing audio:', error);
+      });
+      
+      setInterval(vibrate, 100);
+    });
+
+    // Error handling
+    window.onerror = function(error) {
+      console.log('Error:', error);
+    };
+  </script>
+  
+  
+  
  
- 
- 
- </body></html>
+</body>
+
+</html>
